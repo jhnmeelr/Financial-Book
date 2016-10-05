@@ -1,0 +1,18 @@
+@import 'variables';
+
+// base
+@import 'base/normalize';
+@import 'base/base';
+
+// fonts
+@import 'fonts/fonts';
+
+// wraps
+@import 'wraps/app';
+@import 'wraps/date';
+@import 'wraps/header';
+@import 'wraps/list';
+@import 'wraps/main';
+@import 'wraps/new-note';
+@import 'wraps/settings';
+@import 'wraps/view';

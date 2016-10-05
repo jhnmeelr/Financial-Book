@@ -1,0 +1,14 @@
+CACHE MANIFEST
+# 7a948a678fbc9abbba2b
+
+http://financial-book.herokuapp.com/assets/fonts/NeuronAngled-Bold.otf
+http://financial-book.herokuapp.com/assets/fonts/NeuronAngled-Light.otf
+http://financial-book.herokuapp.com/assets/images/icon.png
+http://financial-book.herokuapp.com/bundle.js
+http://financial-book.herokuapp.com/styles.css
+
+CACHE:
+index.html
+
+SETTINGS:
+prefer-online

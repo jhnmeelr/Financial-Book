@@ -1,0 +1,192 @@
+.list-wrap {
+    height: 100%;
+    width: 100%;
+    background-color: $color-3;
+    .list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: absolute;
+        top: 10%;
+        height: 90%;
+        width: 100%;
+        background-color: $color-2;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        .no-records {
+            font-size: 24px;
+            padding: 25px 50px;
+            text-align: center;
+        }
+        li {
+            height: 60px; // ..120 for subc ..180 for 2 subc
+            font-size: 20px;
+            line-height: 60px;
+            overflow: hidden;
+            border-bottom: 1px solid $color-10;
+            transition: all .25s cubic-bezier(0.4, 0, 0.2, 1);
+            .category {
+                position: relative;
+                margin: 0 20px;
+                font-weight: 800;
+                .name {
+                    position: relative;
+                    color: $color-7;
+                    .amount {
+                        position: absolute;
+                        right: -8px;
+                        top: -10px;
+                        padding: 2px;
+                        font-weight: 700;
+                        font-size: 10px;
+                        line-height: 10px;
+                        color: $color-2;
+                        background-color: $color-5;
+                    }
+                }
+                .value {
+                    float: right;
+                    margin-right: -25px;
+                    color: $color-5;
+                    transform: translateX(0%);
+                    transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+                    .icon {
+                        margin-left: 3px;
+                    }
+                }
+                .delete-item {
+                    position: relative;
+                    float: right;
+                    margin-right: -10px;
+                    width: 35px;
+                    height: 60px;
+                    transform: translateX(150%);
+                    transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+                    span {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%) rotate(45deg);
+                        height: 18px;
+                        width: 18px;
+                        border-radius: 50%;
+                        background-color: #a5a5a5;
+                        box-shadow: inset 1px 0px 1px 0px rgba(0, 0, 0, 0.3);
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 2px;
+                            height: 10px;
+                            background-color: #fff;
+                        }
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 10px;
+                            height: 2px;
+                            background-color: #fff;
+                        }
+                    }
+                }
+            }
+            .subcategories {
+                padding: 0;
+                list-style: none;
+                .subcategory {
+                    margin: 0 20px;
+                    color: rgba(120,120,120,1);
+                    overflow: visible;
+                    .value {
+                        float: right;
+                        margin-right: -25px;
+                        color: $color-5;
+                        transform: translateX(0%);
+                        transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+                        .icon {
+                            margin-left: 3px;
+                            margin-right: 1px;
+                        }
+                    }
+                    .delete-item {
+                        position: relative;
+                        float: right;
+                        margin-right: -10px;
+                        width: 35px;
+                        height: 60px;
+                        transform: translateX(150%);
+                        transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+                        span {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%) rotate(45deg);
+                            height: 18px;
+                            width: 18px;
+                            border-radius: 50%;
+                            background-color: #a5a5a5;
+                            box-shadow: inset 1px 0px 1px 0px rgba(0, 0, 0, 0.3);
+                            &:before {
+                                content: '';
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                width: 2px;
+                                height: 10px;
+                                background-color: #fff;
+                            }
+                            &:after {
+                                content: '';
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                width: 10px;
+                                height: 2px;
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        li.active {
+            height: 120px;
+            background-color: #f0f0f0;
+            .category {
+                .value {
+                    transform: translateX(-23px);
+                }
+                .delete-item {
+                    transform: translateX(0%);
+                }
+            }
+            .subcategory {
+                position: relative;
+                border-top: 1px solid #c7c7c7;
+                border-bottom: none;
+                .value {
+                    transform: translateX(-23px);
+                }
+                .delete-item {
+                    transform: translateX(0%);
+                }
+            }
+        }
+    }
+}
+
+@media screen and ( max-height: 400px ) {
+    .list-wrap {
+        .list {
+            top: 15%;
+            height: 85%;
+        }
+    }
+}
